@@ -1,0 +1,1 @@
+create table user_words (id INT, word VARCHAR (255), translate VARCHAR (255));
