@@ -1,13 +1,8 @@
-package command;
+package com.github.DmitryDK3.wordmemotgbot.command;
 
 import com.github.DmitryDK3.wordmemotgbot.service.SendMessageToBot;
 import com.google.common.collect.ImmutableMap;
 import org.springframework.stereotype.Component;
-
-import static command.CommandName.HELP;
-import static command.CommandName.NO;
-import static command.CommandName.START;
-import static command.CommandName.STOP;
 
 @Component
 public class CommandContainer {
@@ -17,10 +12,10 @@ public class CommandContainer {
     private Command unknownCommand;
 
     public CommandContainer(SendMessageToBot sendMessageToBot) {
-        commands = ImmutableMap.<String, Command>builder().put(START.getCommandName(), new StartCommand(sendMessageToBot))
-                                        .put(STOP.getCommandName(), new StopCommand(sendMessageToBot))
-                                        .put(HELP.getCommandName(), new HelpCommand(sendMessageToBot))
-                                        .put(NO.getCommandName(), new NoCommand(sendMessageToBot))
+        commands = ImmutableMap.<String, Command>builder().put(CommandName.START.getCommandName(), new StartCommand(sendMessageToBot))
+                                        .put(CommandName.STOP.getCommandName(), new StopCommand(sendMessageToBot))
+                                        .put(CommandName.HELP.getCommandName(), new HelpCommand(sendMessageToBot))
+                                        .put(CommandName.NO.getCommandName(), new NoCommand(sendMessageToBot))
                                         .build();
         this.unknownCommand = new UnknownCommand(sendMessageToBot);
 

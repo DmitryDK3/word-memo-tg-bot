@@ -1,9 +1,10 @@
 package com.github.DmitryDK3.wordmemotgbot.service;
 
 import com.github.DmitryDK3.wordmemotgbot.bot.WordsMemoBot;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-
+@Component
 public class SendMessageToBotImpl implements SendMessageToBot {
 
     private WordsMemoBot wordsMemoBot;

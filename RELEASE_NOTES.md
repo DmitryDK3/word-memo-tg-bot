@@ -8,3 +8,7 @@
 ## 0.2.0-SNAPSHOT
 
 * added basic commands for manage bot
+
+## 0.3.0-SNAPSHOT
+
+* added some unit tests
