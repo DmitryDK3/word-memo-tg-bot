@@ -1,4 +1,4 @@
-package command;
+package com.github.DmitryDK3.wordmemotgbot.command;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
 
